@@ -23,7 +23,7 @@ Use Chrome+Selenium in Pyspider; Reuse a Chrome window; An example to crawl Goog
   }
 }
 ```
-This config file makes Pyspider to crawl websites one by one.
+   This config file makes Pyspider to crawl websites one by one.
 6. To use Chrome+Selenium in Pyspider, write crawl function like: `self.crawl('url', callback=callback_function, fetch_type='js',js_script={'1':str1,'2':str2})`, where str1 and str2 is the Python code running before and after the code `driver.get(fetch['url'])` in selenium_fetcher.py, respectively. Please see the selenium_fetcher.py and GooglePatent.py for details.
 
 ### About GooglePatent.py
