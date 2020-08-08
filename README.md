@@ -11,4 +11,9 @@ Why use this?
 2. Start a new Chrome window and then login any website mannully. After that, we re-use this window to crawl website meaning we do not need to worry about the login anymore. We can also interact with this window anytime. The re-using of window also have a disadvantage, we can only crawl websites one by one meaning the speed is low.
 
 How to use?
-1. Make sure that the Chrome webdrive, Selenium, Pyspider and Flask are corrected installed.(I use Anaconda Python 2.7 in Win10)
+1. Make sure that the Chrome webdrive, Selenium, Pyspider and Flask are corrected installed. (I use Anaconda Python 2.7 in Win10)
+2. Run StartNewSession.py after setting the Chrome options, especially proxy and user-data-dir, via chrome_options.add_argument().
+3. In ReUseForChrome.py file, specify the right location of SessionInfo.txt at the line [with open("F:\GitHub\lib_ChromeReuse\SessionInfo.txt", 'r') as f:].
+4. Run selenium_fetcher.py after specifying the right locaiton of ReUseForChrome.py at the line [sys.path.append("F:\GitHub\lib_ChromeReuse")]
+5. Run command
+
