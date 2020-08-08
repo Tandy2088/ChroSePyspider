@@ -16,13 +16,13 @@ Use Chrome+Selenium in Pyspider; Reuse a Chrome window; An example to crawl Goog
 3. In ReUseForChrome.py file, specify the right location of file SessionInfo.txt at the line `with open("F:\GitHub\lib_ChromeReuse\SessionInfo.txt", 'r') as f:`.
 4. Run selenium_fetcher.py after specifying the right locaiton of file ReUseForChrome.py at the line `sys.path.append("F:\GitHub\lib_ChromeReuse")`. This will start a service at `localhost:9000` to use Chrome+Selenium as javascript fetcher.  
 5. Run command `pyspider --phantomjs-proxy=http://localhost:9000 -c pyspidercon.json` to launch the Pyspider, where pyspidercon.json is a config file containing at least the following:
-```
+   ```
    {
      "fetcher":{
 	   "poolsize":1
      }
    }
-```
+   ```
 This config file makes Pyspider to crawl websites one by one.
 6. To use Chrome+Selenium in Pyspider, write crawl function like: `self.crawl('url', callback=callback_function, fetch_type='js',js_script={'1':str1,'2':str2})`, where str1 and str2 is the Python code running before and after the code `driver.get(fetch['url'])` in selenium_fetcher.py, respectively. Please see the selenium_fetcher.py and GooglePatent.py for details.
 
