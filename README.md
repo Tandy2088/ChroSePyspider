@@ -13,7 +13,14 @@ Why use this?
 How to use?
 1. Make sure that the Chrome webdrive, Selenium, Pyspider and Flask are corrected installed. (I use Anaconda Python 2.7 in Win10)
 2. Run StartNewSession.py after setting the Chrome options, especially proxy and user-data-dir, via chrome_options.add_argument().
-3. In ReUseForChrome.py file, specify the right location of SessionInfo.txt at the line [with open("F:\GitHub\lib_ChromeReuse\SessionInfo.txt", 'r') as f:].
-4. Run selenium_fetcher.py after specifying the right locaiton of ReUseForChrome.py at the line [sys.path.append("F:\GitHub\lib_ChromeReuse")]
-5. Run command
+3. In ReUseForChrome.py file, specify the right location of file SessionInfo.txt at the line [with open("F:\GitHub\lib_ChromeReuse\SessionInfo.txt", 'r') as f:].
+4. Run selenium_fetcher.py after specifying the right locaiton of file ReUseForChrome.py at the line [sys.path.append("F:\GitHub\lib_ChromeReuse")]
+5. Run command [pyspider --phantomjs-proxy=http://localhost:9000 -c pyspidercon.json] to launch the Pyspider, where pyspidercon.json is a config file to contain at least the following:
+{
+  "fetcher":{
+	"poolsize":1
+  }
+}
+This config file makes Pyspider to crawl websites one by one.
+
 
