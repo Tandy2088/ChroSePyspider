@@ -1,4 +1,4 @@
-# ChroSePysipder
+# ChroSePyspider
 Use Chrome+Selenium in Pyspider; Reuse a Chrome window; An example to crawl Google Patent
 
 ### What is this？
