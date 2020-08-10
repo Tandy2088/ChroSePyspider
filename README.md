@@ -28,3 +28,6 @@ Use Chrome+Selenium in Pyspider; Reuse a Chrome window; An example to crawl Goog
 
 ### About GooglePatent.py
 GooglePatent.py is the source code which can run in Pyspider to crawl GooglePatent via Chrome+Selenium. Enjoy it!
+
+### About headless Chrome
+Add code `chrome_options.add_argument('headless')` in StartNewSession.py to run Chrome in headless mode, which can increase crawling speed.
